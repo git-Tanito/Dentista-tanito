@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmileCare | Dental Clinic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <p class="logo">🦷 Smile<span>Care</span></p>
+
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Especialistas</a></li>
+            <li><a href="#" class="btn-nav">Contacto</a></li>
+        </ul>
+
+        <ul class="redes">
+            <li>
+                <a href="https://wa.me/tu-numero" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com/tu-usuario" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+
+        <button class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+    <header class="hero-header contenedor">
+        <div class="contenedor hero-grid">
+
+            <div class="hero-texto">
+                <h1>Tu sonrisa merece el mejor cuidado especializado</h1>
+
+                <div class="hero-iconos">
+                    <span><i class="fa-solid fa-check"></i> Tecnología 3D</span>
+                    <span><i class="fa-solid fa-check"></i> Citas hoy mismo</span>
+                </div>
+            </div>
+
+            <div class="hero-formulario">
+                <div class="form-card">
+                    <h3>Reserva tu Cita</h3>
+                    <form action="#">
+                        <div class="campo">
+                            <label>Nombre</label>
+                            <input type="text" placeholder="Ej. Juan Pérez">
+                        </div>
+                        <div class="campo">
+                            <label>Teléfono</label>
+                            <input type="tel" placeholder="Tu número móvil">
+                        </div>
+                        <div class="campo">
+                            <label>Especialidad</label>
+                            <select>
+                                <option value="">Seleccionar...</option>
+                                <option value="1">Limpieza Dental</option>
+                                <option value="2">Ortodoncia</option>
+                                <option value="3">Blanqueamiento</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar Solicitud</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
