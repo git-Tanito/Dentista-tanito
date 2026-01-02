@@ -383,7 +383,12 @@ ul {
 }
 
 .main {
-  height: 50rem;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .main {
+    height: 50rem;
+  }
 }
 .sobre-de {
   margin-top: 5rem;
@@ -454,4 +459,73 @@ ul {
 }
 .tratamiento p {
   font-size: 2rem;
+}
+
+.servicios {
+  margin-top: 5rem;
+  background: linear-gradient(-180deg, #79d7beb7 10%, #79d7beb0 40%);
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.servicios::-webkit-scrollbar {
+  display: none;
+}
+
+.servicio {
+  flex: 0 0 80%;
+  scroll-snap-align: center;
+
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .servicios {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 5rem 10%;
+    overflow: visible;
+  }
+
+  .servicio {
+    flex: none;
+    width: auto;
+    scroll-snap-align: none;
+    transition: transform 0.3s ease;
+  }
+
+  .servicio:hover {
+    transform: translateY(-5px);
+    background: var(--dark);
+    h3 {
+      color: var(--white);
+    }
+  }
+}
+.imagen-servicio {
+  width: 5rem;
+}
+.ortodoncia {
+  width: 7rem;
+}
+.servicio h3 {
+  color: var(--dark);
+}
+.imagen-limpieza {
+  width: 7rem;
 }
