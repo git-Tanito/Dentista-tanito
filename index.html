@@ -17,24 +17,17 @@
 <body>
 
     <nav class="navbar">
-        <p class="logo">🦷 Smile<span>Care</span></p>
+        <a href="#" class="logo">🦷 Smile<span>Care</span></a>
 
         <ul class="nav-links" id="nav-menu">
             <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#">Especialistas</a></li>
+            <li><a href="#sobre-nosotros">Nosotros</a></li>
             <li><a href="#formulario" class="btn-nav">Contacto</a></li>
         </ul>
 
         <ul class="redes">
-            <li>
-                <a href="https://wa.me/tu-numero" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://instagram.com/tu-usuario" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+            <li><a href="https://wa.me/tu-numero" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="https://instagram.com/tu-usuario" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </li>
         </ul>
 
@@ -42,36 +35,35 @@
             <i class="fa-solid fa-bars"></i>
         </button>
     </nav>
+
     <header class="hero-header contenedor">
         <div class="circulo-1"></div>
         <div class="circulo-2"></div>
         <div class="circulo-3"></div>
         <div class="circulo-4"></div>
         <div class="circulo-5"></div>
-        <div class="contenedor hero-grid">
 
-
+        <div class="hero-grid">
             <div class="hero-texto">
                 <h1 class="hero-heading">Tu sonrisa merece el mejor cuidado especializado</h1>
                 <div class="hero-imagen"></div>
             </div>
-
 
             <div class="hero-formulario">
                 <div class="form-card">
                     <h3 class="heading-formulario">Reserva tu Cita</h3>
                     <form action="#" id="formulario">
                         <div class="campo">
-
-                            <input type="text" placeholder="Ej. Juan Pérez">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" placeholder="Ej. Juan Pérez">
                         </div>
                         <div class="campo">
-
-                            <input type="tel" placeholder="Tu número móvil">
+                            <label for="tel">Teléfono</label>
+                            <input type="tel" id="tel" placeholder="Tu número móvil">
                         </div>
                         <div class="campo">
-
-                            <select>
+                            <label for="serv">Servicio</label>
+                            <select id="serv">
                                 <option value="">Seleccionar...</option>
                                 <option value="1">Limpieza Dental</option>
                                 <option value="2">Ortodoncia</option>
@@ -82,68 +74,124 @@
                     </form>
                 </div>
             </div>
-
         </div>
     </header>
-    <main id="servicios" class="main contenedor">
+
+    <main class="main contenedor" id="sobre-nosotros">
         <section class="sobre-de">
             <div class="imagen-consulorio"></div>
             <div class="consultorio-descripcion">
                 <div class="descripcion">
                     <h3>About Our Center SmileCare</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga est quisquam eum exercitationem
-                        nesciunt similique sunt quae iusto? Repellat, consectetur?</p>
+                    <p>En SmileCare nos apasiona crear sonrisas saludables. Contamos con tecnología de punta y un equipo
+                        humano comprometido con tu bienestar.</p>
                 </div>
                 <div class="descripcion-tratamientos">
-                    <div class=" tratamiento-principal">
-                        <h3 class="numero">600</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, iure.</p>
+                    <div class="tratamiento-principal">
+                        <h3 class="numero">1500+</h3>
+                        <p>Pacientes felices atendidos.</p>
                     </div>
                     <div class="tratamiento">
-                        <h3 class="numero">30</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, iure.</p>
+                        <h3 class="numero">15+</h3>
+                        <p>Años de experiencia clínica.</p>
                     </div>
                     <div class="tratamiento">
-                        <h3 class="numero">90</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, iure.</p>
+                        <h3 class="numero">24/7</h3>
+                        <p>Disponibilidad para urgencias.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <section class="servicios">
-        <div class="servicio">
-            <img class="imagen-servicio" src="images/prueba-imagen.png" alt="imagen limpieza dental">
-            <h3>Braquets</h3>
-        </div>
-        <div class="servicio">
-            <img class="ortodoncia" src="images/ortodoncia-imagen.png" alt="imagen ortodoncia dental">
-            <h3>Ortodoncia</h3>
-        </div>
-        <div class="servicio">
-            <img class="imagen-limpieza" src="images/limpieza.png" alt="imagen limpieza dental">
+    <section id="servicios" class="servicios">
+        <article class="servicio">
+            <img class="imagen-servicio" src="images/diente-braquets.png" alt="brackets">
+            <h3>Brackets</h3>
+            <p>Corregimos su alineación y mordida mediante tratamientos de ortodoncia avanzados.</p>
+        </article>
+
+        <article class="servicio">
+            <img class="imagen-servicio" src="images/diente-alineadores.png" alt="alineadores">
+            <h3>Alineadores</h3>
+            <p>Enderece sus dientes de forma discreta con tecnología 3D y alineadores invisibles.</p>
+        </article>
+
+        <article class="servicio">
+            <img class="imagen-limpieza" src="images/diente-limpieza.png" alt="limpieza">
             <h3>Limpieza</h3>
+            <p>Proteja su salud bucal y elimine manchas con nuestra limpieza profunda y flúor.</p>
+        </article>
+
+        <article class="servicio">
+            <img class="imagen-limpieza" src="images/diente-restauracion.png" alt="restauracion">
+            <h3>Restauración</h3>
+            <p>Recupere la fuerza y estética de sus dientes dañados con resinas estéticas.</p>
+        </article>
+
+        <article class="servicio">
+            <img class="imagen-limpieza" src="images/diente-blanqueamiento.png" alt="blanqueamiento">
+            <h3>Blanqueamiento</h3>
+            <p>Aclare varios tonos el color de sus dientes con resultados desde la primera sesión.</p>
+        </article>
+
+        <article class="servicio">
+            <img class="imagen-limpieza" src="images/diente-implante.png" alt="implantes">
+            <h3>Implantes</h3>
+            <p>Sustituya piezas perdidas con soluciones permanentes de apariencia natural.</p>
+        </article>
+
+        <article class="servicio">
+            <img class="imagen-limpieza" src="images/odontologia-infantil.png" alt="infantil">
+            <h3>Odontología Infantil</h3>
+            <p>Cuidado dental especializado y divertido para los más pequeños de la casa.</p>
+        </article>
+
+        <article class="servicio">
+            <img class="imagen-limpieza" src="images/urgencias.png" alt="urgencias">
+            <h3>Urgencias 24/7</h3>
+            <p>Atención inmediata para dolores agudos y molestias inesperadas en cualquier momento.</p>
+        </article>
+    </section>
+    <section id="ubicacion" class="ubicacion contenedor">
+        <div class="ubicacion-header">
+            <h2>Nuestra Ubicación</h2>
+            <p>Visítanos en el corazón de Aguascalientes. ¡Te esperamos!</p>
         </div>
-        <div class="servicio">
-            <img class="imagen-limpieza" src="images/limpieza.png" alt="imagen limpieza dental">
-            <h3>Limpieza</h3>
-        </div>
-        <div class="servicio">
-            <img class="imagen-limpieza" src="images/limpieza.png" alt="imagen limpieza dental">
-            <h3>Limpieza</h3>
-        </div>
-        <div class="servicio">
-            <img class="imagen-limpieza" src="images/limpieza.png" alt="imagen limpieza dental">
-            <h3>Limpieza</h3>
-        </div>
-        <div class="servicio">
-            <img class="imagen-limpieza" src="images/limpieza.png" alt="imagen limpieza dental">
-            <h3>Limpieza</h3>
-        </div>
-        <div class="servicio">
-            <img class="imagen-limpieza" src="images/limpieza.png" alt="imagen limpieza dental">
-            <h3>Limpieza</h3>
+
+        <div class="mapa-grid">
+            <div class="mapa-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3702.435777416301!2d-102.2917!3d21.8833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ee6479624507%3A0xc665089f6643743f!2sAguascalientes%2C%20Ags.!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="info-contacto">
+                <div class="info-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h3>Dirección</h3>
+                        <p>Av. Convención de 1914 Sur #408-A, Lindavista, Aguascalientes.</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h3>Horarios</h3>
+                        <p>Lun - Vie: 9:00 AM - 7:00 PM</p>
+                        <p>Sábados: 9:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h3>Teléfono</h3>
+                        <p>+52 449 978 0481</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

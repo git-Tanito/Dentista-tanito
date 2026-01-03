@@ -515,17 +515,90 @@ ul {
     h3 {
       color: var(--white);
     }
+    p {
+      color: var(--white);
+    }
   }
 }
 .imagen-servicio {
-  width: 5rem;
-}
-.ortodoncia {
   width: 7rem;
 }
+
 .servicio h3 {
   color: var(--dark);
 }
 .imagen-limpieza {
   width: 7rem;
+}
+.ubicacion {
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+}
+
+.ubicacion-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ubicacion-header h2 {
+  font-size: 3.2rem;
+  color: var(--dark);
+}
+
+.mapa-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 992px) {
+  .mapa-grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+  }
+}
+
+.mapa-container {
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 5px solid var(--white);
+}
+
+.info-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateX(10px);
+}
+
+.info-card i {
+  font-size: 2.4rem;
+  color: var(--mint);
+  margin-top: 0.5rem;
+}
+
+.info-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+  color: var(--dark);
+}
+
+.info-card p {
+  margin: 0;
+  color: #666;
+  font-size: 1.5rem;
 }
