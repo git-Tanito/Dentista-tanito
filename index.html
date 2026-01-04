@@ -55,11 +55,12 @@
                     <form action="#" id="formulario">
                         <div class="campo">
                             <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" placeholder="Ej. Juan Pérez">
+                            <input name="nombre" type="text" id="nombre" placeholder="Ej. Juan Pérez">
                         </div>
                         <div class="campo">
                             <label for="tel">Teléfono</label>
-                            <input type="tel" id="tel" placeholder="Tu número móvil">
+                            <input type="tel" name="tel" id="tel"
+                                placeholder="Tu número móvil Ej: 4492345678 (10 dígitos)">
                         </div>
                         <div class="campo">
                             <label for="serv">Servicio</label>
@@ -70,7 +71,10 @@
                                 <option value="3">Blanqueamiento</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn-submit">Enviar Solicitud</button>
+                        <div id="sniper" class="hidden sniper">
+                            <span class="loader"></span>
+                        </div>
+                        <button type="submit" id="btn-submit" class="btn-submit">Enviar Solicitud</button>
                     </form>
                 </div>
             </div>
@@ -213,17 +217,17 @@
         </div>
         <div class="equipo-grid">
             <div class="doctor-card">
-                <div class="foto-doctor" style="background-image: url('images/doc1.jpg');"></div>
+                <div class="foto-doctor" style="background-image: url('images/doctora.png');"></div>
                 <h3>Dra. Ana López</h3>
                 <span class="especialidad">Ortodoncista</span>
             </div>
             <div class="doctor-card">
-                <div class="foto-doctor" style="background-image: url('images/doc2.jpg');"></div>
+                <div class="foto-doctor" style="background-image: url('images/doctor-carlos.png');"></div>
                 <h3>Dr. Carlos Ruiz</h3>
                 <span class="especialidad">Cirujano Maxilofacial</span>
             </div>
             <div class="doctor-card">
-                <div class="foto-doctor" style="background-image: url('images/doc3.jpg');"></div>
+                <div class="foto-doctor" style="background-image: url('images/doctora-sofia.png');"></div>
                 <h3>Dra. Sofía M.</h3>
                 <span class="especialidad">Odontopediatría</span>
             </div>
@@ -279,6 +283,8 @@
     <a href="https://wa.me/tunúmero" class="btn-float-ws" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <script src="app.js"></script>
 </body>
 
