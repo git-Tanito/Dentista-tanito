@@ -39,8 +39,23 @@ ul {
   margin: 0;
   list-style: none;
 }
+
+label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.seccion {
+  margin-bottom: 5rem;
+}
 .contenedor {
-  width: 95%;
+  width: 99%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -51,7 +66,6 @@ ul {
   align-items: center;
   height: 8rem;
   padding: 0 5rem;
-
   box-shadow: 0px 0px 8px 1px #888888;
   position: relative;
 }
@@ -149,7 +163,6 @@ ul {
   background: linear-gradient(135deg, var(--mint) 0%, #f0f9f7 100%);
   display: flex;
   align-items: center;
-  margin-top: 5rem;
   border-radius: 2rem;
 }
 @media (min-width: 768px) {
@@ -294,7 +307,7 @@ ul {
 }
 
 .heading-formulario {
-  color: var(--white);
+  color: var(--dark);
 }
 
 .form-card {
@@ -351,7 +364,7 @@ ul {
 .btn-submit {
   width: 100%;
   background-color: var(--mint);
-  color: var(--white);
+  color: var(--dark);
   padding: 1.5rem;
   border: none;
   border-radius: 0.8rem;
@@ -359,6 +372,10 @@ ul {
   font-weight: 700;
   cursor: pointer;
   margin-top: 1rem;
+}
+.btn-submit:hover {
+  background-color: var(--dark);
+  color: var(--white);
 }
 
 /* Responsive para el Hero */
@@ -397,7 +414,7 @@ ul {
   .sobre-de {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 5rem;
     height: 100%;
   }
 }
@@ -462,15 +479,14 @@ ul {
 }
 
 .servicios {
-  margin-top: 5rem;
   background: linear-gradient(-180deg, #79d7beb7 10%, #79d7beb0 40%);
   display: flex;
   gap: 1.5rem;
   padding: 2rem;
-
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  margin: 5rem auto;
 }
 
 .servicios::-webkit-scrollbar {
@@ -480,7 +496,6 @@ ul {
 .servicio {
   flex: 0 0 80%;
   scroll-snap-align: center;
-
   background: rgba(255, 255, 255, 0.4);
   border-radius: 15px;
   backdrop-filter: blur(5px);
@@ -490,6 +505,7 @@ ul {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: all 0.4s ease-in-out;
 }
 
 @media (min-width: 1024px) {
@@ -498,7 +514,7 @@ ul {
 
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    padding: 5rem 10%;
+
     overflow: visible;
   }
 
@@ -579,10 +595,13 @@ ul {
   border-radius: 1.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
+  height: 14rem;
 }
 
 .info-card:hover {
-  transform: translateX(10px);
+  transform: translateY(-5px);
+  border-left: 4px solid var(--mint);
+  box-shadow: 0 px 20px rgba(0, 0, 0, 0.1);
 }
 
 .info-card i {
@@ -601,4 +620,206 @@ ul {
   margin: 0;
   color: #666;
   font-size: 1.5rem;
+}
+.equipo {
+  margin: 5rem auto;
+}
+.header-seccion {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.header-seccion h2 {
+  color: var(--dark);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.doctor-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.foto-doctor {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ddd; /* Color base si no hay foto */
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 1.5rem auto;
+  border: 4px solid var(--mint);
+}
+
+.doctor-card h3 {
+  margin: 0;
+  color: var(--dark);
+  font-size: 2rem;
+}
+.especialidad {
+  color: var(--mint);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pregunta {
+  background: var(--white);
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+}
+
+.pregunta summary {
+  font-weight: 700;
+  color: var(--dark);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Animación para que el texto no aparezca de golpe */
+.pregunta p {
+  animation: aparecer 0.4s ease-out;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.pregunta summary::after {
+  content: "+";
+  font-size: 2rem;
+  color: var(--mint);
+}
+
+.pregunta[open] summary::after {
+  content: "-";
+}
+
+.pregunta p {
+  margin-top: 1rem;
+  color: #666;
+  font-size: 1.6rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+.footer {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 5rem 0 2rem 0;
+  margin-top: 5rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.footer .logo {
+  color: var(--white);
+}
+.footer .logo span {
+  color: var(--mint);
+}
+.footer-logo {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer-logo {
+    text-align: left;
+  }
+}
+
+.footer-links h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--mint);
+  text-align: center;
+}
+.footer-links ul li {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer-links ul li {
+    text-align: left;
+  }
+}
+.footer-links a {
+  color: #ccc;
+  font-size: 1.6rem;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+@media (min-width: 768px) {
+  .footer-links h4 {
+    text-align: left;
+  }
+}
+.footer-links a:hover {
+  color: var(--mint);
+}
+
+.footer-legal {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 2rem;
+  font-size: 1.4rem;
+  color: #888;
+}
+/* Estilos para el botón de WhatsApp flotante */
+.btn-float-ws {
+  position: fixed;
+  width: 6rem;
+  height: 6rem;
+  bottom: 50rem;
+  right: 3rem;
+
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-float-ws:hover {
+  transform: scale(1.1);
+  background-color: #128c7e;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+  .btn-float-ws {
+    width: 5.5rem;
+    height: 5.5rem;
+    bottom: 50rem;
+    right: 2rem;
+    font-size: 3rem;
+  }
 }
