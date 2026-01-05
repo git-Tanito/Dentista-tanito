@@ -2,10 +2,8 @@ const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
 
-// 1. Ruta de tu carpeta de imágenes
 const directorio = "./images";
 
-// Comprobar si la carpeta existe
 if (!fs.existsSync(directorio)) {
   console.error("❌ Error: No se encuentra la carpeta /images");
   process.exit(1);
@@ -22,7 +20,7 @@ fs.readdirSync(directorio).forEach((archivo) => {
     const rutaSalida = path.join(directorio, `${nombreSinExt}.webp`);
 
     sharp(rutaEntrada)
-      .webp({ quality: 80 }) // Calidad balanceada para Lighthouse
+      .webp({ quality: 80 })
       .toFile(rutaSalida)
       .then((info) => {
         console.log(
