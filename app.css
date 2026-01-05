@@ -430,8 +430,8 @@ label {
     justify-content: space-evenly;
   }
 }
-.imagen-consulorio {
-  background: url("images/consultoriio.jpg");
+.imagen-consultorio {
+  background: url("images/consultorio.jpg");
   width: 100%;
 
   background-position: center center;
@@ -643,38 +643,24 @@ label {
 }
 
 .doctor-card {
-  background: var(--mint);
+  background: var(--white);
   padding: 2rem;
   border-radius: 2rem;
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
-.doctor-card h3 {
-  margin: 0;
-  color: var(--dark);
-  font-size: 2rem;
-  padding: 1rem;
-}
-.especialidad {
-  color: var(--dark);
-  font-weight: 700;
-  font-size: 1.4rem;
-}
-
 .doctor-card:hover {
   background-color: var(--dark);
   transform: translateY(-10px);
-  transition: transform 0.3s ease;
 }
 
 .doctor-card:hover h3 {
   color: var(--dark-light);
-  transition: color 0.3s ease;
 }
 
 .doctor-card:hover .especialidad {
-  color: var(--dark-light);
+  color: var(--dark-light); /* El blanco resalta mejor sobre el fondo oscuro */
   transition: color 0.3s ease;
 }
 .foto-doctor {
@@ -686,6 +672,17 @@ label {
   background-position: center;
   margin: 0 auto 1.5rem auto;
   border: 4px solid var(--mint);
+}
+
+.doctor-card h3 {
+  margin: 0;
+  color: var(--dark);
+  font-size: 2rem;
+}
+.especialidad {
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
 .faq-container {
