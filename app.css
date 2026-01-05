@@ -562,6 +562,12 @@ label {
   font-size: 3.2rem;
   color: var(--dark);
 }
+.info-card-link {
+  color: var(--dark);
+}
+.abrir-gps {
+  color: var(--dark);
+}
 
 .mapa-grid {
   display: grid;
@@ -593,6 +599,7 @@ label {
   align-items: flex-start;
   gap: 1.5rem;
   background: var(--white);
+  color: var(--dark);
   padding: 2rem;
   border-radius: 1.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -620,7 +627,7 @@ label {
 
 .info-card p {
   margin: 0;
-  color: #666;
+
   font-size: 1.5rem;
 }
 .equipo {
@@ -803,7 +810,7 @@ label {
   border-top: 1px solid #333;
   padding-top: 2rem;
   font-size: 1.4rem;
-  color: #888;
+  color: var(--colorFondo);
 }
 /* Estilos para el botón de WhatsApp flotante */
 .btn-float-ws {
