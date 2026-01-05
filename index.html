@@ -22,6 +22,7 @@
         <ul class="nav-links" id="nav-menu">
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#sobre-nosotros">Nosotros</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
             <li><a href="#formulario" class="btn-nav">Contacto</a></li>
         </ul>
 
@@ -62,19 +63,11 @@
                             <input type="tel" name="tel" id="tel"
                                 placeholder="Tu número móvil Ej: 4492345678 (10 dígitos)">
                         </div>
-                        <div class="campo">
-                            <label for="serv">Servicio</label>
-                            <select id="serv">
-                                <option value="">Seleccionar...</option>
-                                <option value="1">Limpieza Dental</option>
-                                <option value="2">Ortodoncia</option>
-                                <option value="3">Blanqueamiento</option>
-                            </select>
-                        </div>
+
                         <div id="sniper" class="hidden sniper">
                             <span class="loader"></span>
                         </div>
-                        <button type="submit" id="btn-submit" class="btn-submit">Enviar Solicitud</button>
+                        <button type="submit" id="btn-submit" class="btn-submit">Enviar Datos</button>
                     </form>
                 </div>
             </div>
@@ -83,7 +76,7 @@
 
     <main class="main contenedor seccion" id="sobre-nosotros">
         <section class="sobre-de">
-            <div class="imagen-consulorio"></div>
+            <div class="imagen-consultorio"></div>
             <div class="consultorio-descripcion">
                 <div class="descripcion">
                     <h3>Especialistas en tu Salud Bucal</h3>
@@ -113,13 +106,13 @@
             <article class="servicio">
                 <img class="imagen-servicio" src="images/diente-braquets.png" alt="brackets">
                 <h3>Brackets</h3>
-                <p>Corregimos su alineación y mordida mediante tratamientos de ortodoncia avanzados.</p>
+                <p>Alineamos tus dientes y mordida mediante tratamientos de ortodoncia avanzados.</p>
             </article>
 
             <article class="servicio">
                 <img class="imagen-servicio" src="images/diente-alineadores.png" alt="alineadores">
                 <h3>Alineadores</h3>
-                <p>Enderece sus dientes de forma discreta con tecnología 3D y alineadores invisibles.</p>
+                <p>Endereza tus dientes de forma discreta con tecnología 3D y alineadores invisibles.</p>
             </article>
 
             <article class="servicio">
@@ -192,7 +185,7 @@
                     <div>
                         <h3>Horarios</h3>
                         <p>Lun - Vie: 9:00 AM - 7:00 PM</p>
-                        <p>Sábados: 9:00 AM - 2:00 PM</p>
+                        <p>Sáb: 9:00 AM - 2:00 PM</p>
                     </div>
                 </div>
 
@@ -210,24 +203,36 @@
         </div>
     </section>
 
-    <section class="equipo contenedor seccion">
+    <section class="equipo contenedor seccion" id="equipo">
         <div class="header-seccion">
             <h2>Conoce a tus Doctores</h2>
             <p>Expertos certificados apasionados por tu sonrisa</p>
         </div>
+
+
+
+
         <div class="equipo-grid">
             <div class="doctor-card">
-                <div class="foto-doctor" style="background-image: url('images/doctora.png');"></div>
+                <div class="foto-marco">
+                    <img src="images/doctora.png" alt="Dra. Ana López" class="foto-doctor" loading="lazy">
+                </div>
                 <h3>Dra. Ana López</h3>
                 <span class="especialidad">Ortodoncista</span>
             </div>
+
             <div class="doctor-card">
-                <div class="foto-doctor" style="background-image: url('images/doctor-carlos.png');"></div>
+                <div class="foto-marco">
+                    <img src="images/doctor-carlos.png" alt="Dr. Carlos Ruiz" class="foto-doctor" loading="lazy">
+                </div>
                 <h3>Dr. Carlos Ruiz</h3>
                 <span class="especialidad">Cirujano Maxilofacial</span>
             </div>
+
             <div class="doctor-card">
-                <div class="foto-doctor" style="background-image: url('images/doctora-sofia.png');"></div>
+                <div class="foto-marco">
+                    <img src="images/doctora-sofia.png" alt="Dra. Sofía M." class="foto-doctor" loading="lazy">
+                </div>
                 <h3>Dra. Sofía M.</h3>
                 <span class="especialidad">Odontopediatría</span>
             </div>
@@ -269,7 +274,7 @@
                 <h4>Enlaces Rápidos</h4>
                 <ul>
                     <li><a href="#servicios">Tratamientos</a></li>
-                    <li><a href="#sobre-nosotros">Doctores</a></li>
+                    <li><a href="#doctores">Doctores</a></li>
                     <li><a href="#ubicacion">Cómo llegar</a></li>
                 </ul>
             </div>

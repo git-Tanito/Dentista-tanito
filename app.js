@@ -68,7 +68,7 @@ function validarForm(e) {
       sniper.classList.add("hidden");
       btnSubmit.disabled = false;
       btnSubmit.style.cursor = "pointer";
-      alert("Fallo el envío: " + JSON.stringify(error));
+      mostrarAlerta("Hubo un error al cargar", "error");
     });
 }
 
