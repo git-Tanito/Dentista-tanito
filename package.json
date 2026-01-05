@@ -1,0 +1,16 @@
+{
+  "name": "dentalstudio",
+  "version": "1.0.0",
+  "description": "Landing page profesional para clínica dental con sistema de contacto EmailJS y validaciones robustas.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "convert": "node convertir.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "^0.32.6"
+  }
+}
